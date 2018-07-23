@@ -15,12 +15,12 @@
         <scene sceneID="R6t-jY-SC4">
             <objects>
                 <tableViewController id="5NT-zH-fvP" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YeE-57-AKl">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YeE-57-AKl" customClass="DislayLocationTableView" customModule="MapText" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="LDY-sc-esp">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="LDY-sc-esp" customClass="DisplayLocationTableViewCell" customModule="MapText" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LDY-sc-esp" id="Lye-gS-rR8">
@@ -52,6 +52,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="locationActive" destination="Vdp-0W-PPa" id="YJE-dv-oJs"/>
+                                    <outlet property="locationCoordinates" destination="WnD-pY-dvg" id="IPg-u1-plU"/>
+                                    <outlet property="locationName" destination="0zT-Ph-7sH" id="OLc-oF-sfC"/>
                                     <segue destination="Gqr-00-87g" kind="show" id="x2V-Fy-Bcx"/>
                                 </connections>
                             </tableViewCell>
@@ -72,7 +75,7 @@
         <!--Edit Location-->
         <scene sceneID="9dP-hx-21m">
             <objects>
-                <viewController id="Gqr-00-87g" sceneMemberID="viewController">
+                <viewController id="Gqr-00-87g" customClass="ModifyLocationViewController" customModule="MapText" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KoD-Nl-HlW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

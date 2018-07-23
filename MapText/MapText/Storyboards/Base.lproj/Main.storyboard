@@ -216,11 +216,29 @@
                         <viewLayoutGuide key="safeArea" id="Gbh-hO-uQL"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Location" id="R2h-ZH-Obd">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NKU-1d-tWY"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Xvo-tb-74l"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NKU-1d-tWY">
+                            <connections>
+                                <segue destination="Wtf-az-uN8" kind="unwind" identifier="cancel" unwindAction="unwindWithSegue:" id="yW8-0t-xmj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Xvo-tb-74l">
+                            <connections>
+                                <segue destination="Wtf-az-uN8" kind="unwind" identifier="save" unwindAction="unwindWithSegue:" id="x5y-cX-2pw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="latitudeTextField" destination="oRb-qg-mrw" id="fe0-gJ-4g8"/>
+                        <outlet property="locationTextField" destination="D4Z-qY-HcD" id="FQp-RA-TPL"/>
+                        <outlet property="longitudeTextField" destination="aKc-Mr-W1F" id="Shj-cp-4CM"/>
+                        <outlet property="phone1TextField" destination="V1C-ID-4fD" id="rCb-pp-Sjo"/>
+                        <outlet property="phone2TextField" destination="FlG-lt-91q" id="pHk-Mf-a94"/>
+                        <outlet property="phone3TextField" destination="Ina-XO-K6N" id="UKy-vl-sfd"/>
+                        <outlet property="phone4TextField" destination="1NX-Cn-rU2" id="wcj-Bs-Rzk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZZ-Lb-ozl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Wtf-az-uN8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2816.8000000000002" y="120.98950524737631"/>
         </scene>

@@ -17,6 +17,7 @@
 		4BCAFB9A21068DCF00556C7A /* DisplayLocationTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCAFB9921068DCF00556C7A /* DisplayLocationTableView.swift */; };
 		4BCAFB9C21068F3E00556C7A /* DisplayLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCAFB9B21068F3E00556C7A /* DisplayLocationTableViewCell.swift */; };
 		4BCAFB9E2106925100556C7A /* ModifyLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCAFB9D2106925100556C7A /* ModifyLocationViewController.swift */; };
+		4BCAFBA02106968300556C7A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCAFB9F2106968300556C7A /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4BCAFB9921068DCF00556C7A /* DisplayLocationTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLocationTableView.swift; sourceTree = "<group>"; };
 		4BCAFB9B21068F3E00556C7A /* DisplayLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLocationTableViewCell.swift; sourceTree = "<group>"; };
 		4BCAFB9D2106925100556C7A /* ModifyLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyLocationViewController.swift; sourceTree = "<group>"; };
+		4BCAFB9F2106968300556C7A /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		4B3C8AE4210648EA0053877E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4BCAFB9F2106968300556C7A /* Location.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				4BCAFB9E2106925100556C7A /* ModifyLocationViewController.swift in Sources */,
 				4B3C8AD3210643FC0053877E /* AppDelegate.swift in Sources */,
 				4BCAFB9A21068DCF00556C7A /* DisplayLocationTableView.swift in Sources */,
+				4BCAFBA02106968300556C7A /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

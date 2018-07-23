@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 class LocationListViewController:UIViewController {
-    
+    @IBAction func unwindWithSegue(_ segue:UIStoryboardSegue) {
+        
+    }
 }
 

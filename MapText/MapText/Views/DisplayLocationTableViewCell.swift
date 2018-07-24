@@ -13,7 +13,5 @@ class DisplayLocationTableViewCell:UITableViewCell {
     @IBOutlet weak var locationName: UILabel!
     @IBOutlet weak var locationCoordinates: UILabel!
     @IBOutlet weak var locationActive: UISwitch!
-    @IBAction func locationActiveChanged(_ sender: Any) {
-        print("UISwitch is \(locationActive.isOn)")
-    }
+    var index:Int?
 }

@@ -54,6 +54,7 @@ class ModifyLocationViewController:UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let loc=loc {
+            print("loc found")
             locationTextField.text=loc.name
             longitudeTextField.text=String(loc.longitude)
             latitudeTextField.text=String(loc.latitude)
@@ -62,7 +63,8 @@ class ModifyLocationViewController:UIViewController {
             phone3TextField.text=String(loc.phone3)
             phone4TextField.text=String(loc.phone4)
         }
-        else{
+        else {
+            print("loc not found")
             locationTextField.text=""
             longitudeTextField.text=""
             latitudeTextField.text=""

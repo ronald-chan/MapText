@@ -47,7 +47,7 @@
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vdp-0W-PPa">
                                             <rect key="frame" x="301" y="24" width="51" height="31"/>
                                             <connections>
-                                                <action selector="locationActiveChanged:" destination="LDY-sc-esp" eventType="valueChanged" id="GuX-MG-WzO"/>
+                                                <action selector="locationActiveSwitchFlipped:" destination="5NT-zH-fvP" eventType="valueChanged" id="Ai1-hc-yu4"/>
                                             </connections>
                                         </switch>
                                     </subviews>
@@ -63,7 +63,7 @@
                                     <outlet property="locationActive" destination="Vdp-0W-PPa" id="YJE-dv-oJs"/>
                                     <outlet property="locationCoordinates" destination="WnD-pY-dvg" id="IPg-u1-plU"/>
                                     <outlet property="locationName" destination="0zT-Ph-7sH" id="OLc-oF-sfC"/>
-                                    <segue destination="Gqr-00-87g" kind="show" id="x2V-Fy-Bcx"/>
+                                    <segue destination="Gqr-00-87g" kind="show" identifier="modify" id="x2V-Fy-Bcx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -73,7 +73,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Locations" id="dz1-Nr-gS8">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="6ho-ru-qRI"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="6ho-ru-qRI">
+                            <connections>
+                                <segue destination="Gqr-00-87g" kind="show" identifier="add" id="bFc-a9-bk3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WTD-cP-7Ro" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -269,4 +273,7 @@
             <point key="canvasLocation" x="2015.2" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bFc-a9-bk3"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4B3C8AD3210643FC0053877E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C8AD2210643FC0053877E /* AppDelegate.swift */; };
-		4B3C8AD5210643FC0053877E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C8AD4210643FC0053877E /* ViewController.swift */; };
 		4B3C8AD8210643FC0053877E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B3C8AD6210643FC0053877E /* Main.storyboard */; };
 		4B3C8ADA210643FD0053877E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B3C8AD9210643FD0053877E /* Assets.xcassets */; };
 		4B3C8ADD210643FD0053877E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B3C8ADB210643FD0053877E /* LaunchScreen.storyboard */; };
@@ -22,7 +21,6 @@
 /* Begin PBXFileReference section */
 		4B3C8ACF210643FC0053877E /* MapText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B3C8AD2210643FC0053877E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4B3C8AD4210643FC0053877E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4B3C8AD7210643FC0053877E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B3C8AD9210643FD0053877E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B3C8ADC210643FD0053877E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 		4B3C8AE7210649700053877E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4B3C8AD4210643FC0053877E /* ViewController.swift */,
 				4BCAFB9921068DCF00556C7A /* DisplayLocationTableViewController.swift */,
 				4BCAFB9D2106925100556C7A /* ModifyLocationViewController.swift */,
 			);
@@ -207,7 +204,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BCAFB9C21068F3E00556C7A /* DisplayLocationTableViewCell.swift in Sources */,
-				4B3C8AD5210643FC0053877E /* ViewController.swift in Sources */,
 				4BCAFB9E2106925100556C7A /* ModifyLocationViewController.swift in Sources */,
 				4BCAFBA321079ADC00556C7A /* CoreDataHelper.swift in Sources */,
 				4B3C8AD3210643FC0053877E /* AppDelegate.swift in Sources */,

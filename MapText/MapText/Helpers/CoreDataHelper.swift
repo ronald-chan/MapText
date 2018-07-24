@@ -24,7 +24,7 @@ struct CoreDataHelper
         let loc=NSEntityDescription.insertNewObject(forEntityName: "NotificationLocation", into: context) as! NotificationLocation
         return loc
     }
-    static func retrieveLocation()->[NotificationLocation]
+    static func retrieveLocations()->[NotificationLocation]
     {
         do
         {

@@ -13,5 +13,12 @@ class DisplayLocationTableViewCell:UITableViewCell {
     @IBOutlet weak var locationName: UILabel!
     @IBOutlet weak var locationCoordinates: UILabel!
     @IBOutlet weak var locationActive: UISwitch!
-    var index:Int?
+    var index:Int = -1
+    
+    @IBAction func locationActiveSwitchFlipped(_ sender: Any) {
+        var locs=CoreDataHelper.retrieveLocations()
+        locs[index].locationActive=locationActive.isOn
+        CoreDataHelper.saveLocation()
+        print(locs[index].locationActive)
+    }
 }

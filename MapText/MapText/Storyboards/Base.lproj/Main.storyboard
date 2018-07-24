@@ -47,7 +47,7 @@
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vdp-0W-PPa">
                                             <rect key="frame" x="301" y="24" width="51" height="31"/>
                                             <connections>
-                                                <action selector="locationActiveSwitchFlipped:" destination="5NT-zH-fvP" eventType="valueChanged" id="Ai1-hc-yu4"/>
+                                                <action selector="locationActiveSwitchFlipped:" destination="LDY-sc-esp" eventType="valueChanged" id="8B7-zf-uqk"/>
                                             </connections>
                                         </switch>
                                     </subviews>

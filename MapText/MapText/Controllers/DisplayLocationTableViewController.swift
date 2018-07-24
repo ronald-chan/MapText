@@ -15,11 +15,7 @@ class DislayLocationTableViewController:UITableViewController {
             tableView.reloadData()
         }
     }
-    @IBAction func locationActiveSwitchFlipped(_ sender: Any) {
-        //let cell=sender as! DisplayLocationTableViewCell
-        //locs[cell.index!].locationActive=sender.
     
-    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier=segue.identifier else { return }
         switch identifier
@@ -51,9 +47,20 @@ class DislayLocationTableViewController:UITableViewController {
         cell.locationName.text = loc.name
         cell.locationCoordinates.text = "\(loc.latitude)º N, \(loc.longitude)º W"
         cell.index=indexPath.row
-        
+        cell.locationActive.setOn(loc.locationActive, animated: false)
         return cell
     }
+    
+    override func tableView(_ tableView:UITableView, commit editingStyle:UITableViewCellEditingStyle, forRowAt indexPath:IndexPath)
+    {
+        if editingStyle == .delete
+        {
+            let locToDelete=locs[indexPath.row]
+            CoreDataHelper.delete(loc:locToDelete)
+            locs=CoreDataHelper.retrieveLocations()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         locs=CoreDataHelper.retrieveLocations()

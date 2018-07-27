@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-class DislayLocationTableViewController:UITableViewController {
+class DislayLocationTableViewController:UITableViewController,RefreshDelegate{
     
     var locs=[NotificationLocation]() {
         didSet {
@@ -59,6 +59,10 @@ class DislayLocationTableViewController:UITableViewController {
             CoreDataHelper.delete(loc:locToDelete)
             locs=CoreDataHelper.retrieveLocations()
         }
+    }
+    
+    func refresh() {
+        tableView.reloadData()
     }
     
     override func viewDidLoad() {

@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
                 if loc.locationActive {
                     let formatted=CLLocation(latitude: loc.latitude, longitude: loc.longitude)
                     if !loc.recentlyTriggered && formatted.distance(from: currentLoc!)<10 {
-                        //SMSHelper.sendMessage(loc: loc)
+                        //SMSHelper.sendMessage(loc: loc) //uncomment this to send text
                         print("send text")
                         loc.recentlyTriggered=true
                     }

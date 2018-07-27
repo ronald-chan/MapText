@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     var window: UIWindow?
     var locationManager: CLLocationManager!
     var currentLoc:CLLocation?
+    var prevLoc:CLLocation?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         initLocationManager()
@@ -26,19 +27,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.distanceFilter=10
+        locationManager.distanceFilter=3
         locationManager.requestAlwaysAuthorization()
-        locationManager.startUpdatingLocation()
+        if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways {
+            print("authorized")
+            locationManager.allowsBackgroundLocationUpdates=true
+            locationManager.startUpdatingLocation()
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locs=CoreDataHelper.retrieveLocations()
-        for loc in locs {
-            let formatted=CLLocation(latitude: loc.latitude, longitude: loc.longitude)
-            if formatted.distance(from: locations[locations.count-1])<50 {
-                SMSHelper.sendMessage(loc: loc)
+        currentLoc=CLLocation(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude)
+        if let prev=prevLoc {
+            print(prev.distance(from: currentLoc!) )
+            for loc in locs {
+                if loc.locationActive {
+                    let formatted=CLLocation(latitude: loc.latitude, longitude: loc.longitude)
+                    if !loc.recentlyTriggered && formatted.distance(from: currentLoc!)<10 {
+                        //SMSHelper.sendMessage(loc: loc)
+                        print("send text")
+                        loc.recentlyTriggered=true
+                    }
+                    if formatted.distance(from: currentLoc!)>30 {
+                        loc.recentlyTriggered=false
+                    }
+                }
             }
         }
+        prevLoc=currentLoc
     }
     
     func applicationWillResignActive(_ application: UIApplication) {

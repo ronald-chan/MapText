@@ -9,9 +9,10 @@
         <attribute name="phone2" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="phone3" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="phone4" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="recentlyTriggered" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="userDescription" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="NotificationLocation" positionX="-63" positionY="-18" width="128" height="180"/>
+        <element name="NotificationLocation" positionX="-63" positionY="-18" width="128" height="195"/>
     </elements>
 </model>

@@ -35,6 +35,7 @@ class ModifyLocationViewController:UIViewController {
             loc.phone3=Int64(phone3TextField.text!) ?? -1
             loc.phone4=Int64(phone4TextField.text!) ?? -1
             loc.locationActive=true
+            loc.recentlyTriggered=false
             CoreDataHelper.saveLocation()
         case "save" where loc != nil:
             loc?.name=locationTextField.text ?? ""

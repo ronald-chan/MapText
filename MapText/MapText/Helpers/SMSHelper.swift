@@ -9,15 +9,14 @@
 import Foundation
 import Alamofire
 class SMSHelper {
-    
     static func sendMessage(loc:NotificationLocation) {
         let headers = [
             "Content-Type": "application/x-www-form-urlencoded"
         ]
         
         let parameters: Parameters = [
-            "To": "+14083682003",
-            "Body": "test"
+            "To": loc.phone1,
+            "Body": "User arrived at \(loc.name). "
         ]
         
         Alamofire.request("https://snow-labradoodle-8297.twil.io/sms", method: .post, parameters: parameters, headers: headers).response { response in

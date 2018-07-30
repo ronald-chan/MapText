@@ -7,4 +7,9 @@ target 'MapText' do
 
   # Pods for MapText
   pod 'Alamofire', '~> 4.4'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'FirebaseUI/Auth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
 end

@@ -11,6 +11,14 @@
 		4B3C8AD8210643FC0053877E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B3C8AD6210643FC0053877E /* Main.storyboard */; };
 		4B3C8ADA210643FD0053877E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B3C8AD9210643FD0053877E /* Assets.xcassets */; };
 		4B3C8ADD210643FD0053877E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B3C8ADB210643FD0053877E /* LaunchScreen.storyboard */; };
+		4B55C74B210F8AE000A5E6F4 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B55C74A210F8AE000A5E6F4 /* Login.storyboard */; };
+		4B55C74D210F8B1600A5E6F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B55C74C210F8B1600A5E6F4 /* LoginViewController.swift */; };
+		4B55C74F210F8E2B00A5E6F4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B55C74E210F8E2B00A5E6F4 /* User.swift */; };
+		4B55C751210F8EC600A5E6F4 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B55C750210F8EC600A5E6F4 /* CreateUsernameViewController.swift */; };
+		4B55C753210F92C000A5E6F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B55C752210F92C000A5E6F4 /* GoogleService-Info.plist */; };
+		4B55C755210FC46300A5E6F4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B55C754210FC46300A5E6F4 /* UserService.swift */; };
+		4B55C757210FC92E00A5E6F4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B55C756210FC92E00A5E6F4 /* Constants.swift */; };
+		4B55C75A210FC9A000A5E6F4 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B55C759210FC9A000A5E6F4 /* Storyboard+Utility.swift */; };
 		4B6B7B18210A5F3000800F28 /* SMSHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6B7B17210A5F3000800F28 /* SMSHelper.swift */; };
 		4B81F042210B946100AE07C8 /* RefreshDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B81F041210B946100AE07C8 /* RefreshDelegate.swift */; };
 		4BCAFB9A21068DCF00556C7A /* DisplayLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCAFB9921068DCF00556C7A /* DisplayLocationTableViewController.swift */; };
@@ -28,6 +36,14 @@
 		4B3C8AD9210643FD0053877E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B3C8ADC210643FD0053877E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B3C8ADE210643FD0053877E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B55C74A210F8AE000A5E6F4 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		4B55C74C210F8B1600A5E6F4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4B55C74E210F8E2B00A5E6F4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4B55C750210F8EC600A5E6F4 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
+		4B55C752210F92C000A5E6F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4B55C754210FC46300A5E6F4 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		4B55C756210FC92E00A5E6F4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4B55C759210FC9A000A5E6F4 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
 		4B6B7B17210A5F3000800F28 /* SMSHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSHelper.swift; sourceTree = "<group>"; };
 		4B81F041210B946100AE07C8 /* RefreshDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshDelegate.swift; sourceTree = "<group>"; };
 		4BCAFB9921068DCF00556C7A /* DisplayLocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLocationTableViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +92,7 @@
 			children = (
 				4BCAFBA72108E8AE00556C7A /* MapText.entitlements */,
 				4B3C8AD2210643FC0053877E /* AppDelegate.swift */,
+				4B55C758210FC98400A5E6F4 /* Extensions */,
 				4BCAFBA121079ACF00556C7A /* Helpers */,
 				4B3C8AEB210649FA0053877E /* Services */,
 				4B3C8AE82106497A0053877E /* Views */,
@@ -91,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				4BCAFBA421079D6800556C7A /* MapText.xcdatamodeld */,
+				4B55C74E210F8E2B00A5E6F4 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -99,8 +117,10 @@
 			isa = PBXGroup;
 			children = (
 				4B3C8ADE210643FD0053877E /* Info.plist */,
+				4B55C752210F92C000A5E6F4 /* GoogleService-Info.plist */,
 				4B3C8AD9210643FD0053877E /* Assets.xcassets */,
 				4B81F041210B946100AE07C8 /* RefreshDelegate.swift */,
+				4B55C756210FC92E00A5E6F4 /* Constants.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -110,6 +130,7 @@
 			children = (
 				4B3C8AD6210643FC0053877E /* Main.storyboard */,
 				4B3C8ADB210643FD0053877E /* LaunchScreen.storyboard */,
+				4B55C74A210F8AE000A5E6F4 /* Login.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -119,6 +140,8 @@
 			children = (
 				4BCAFB9921068DCF00556C7A /* DisplayLocationTableViewController.swift */,
 				4BCAFB9D2106925100556C7A /* ModifyLocationViewController.swift */,
+				4B55C74C210F8B1600A5E6F4 /* LoginViewController.swift */,
+				4B55C750210F8EC600A5E6F4 /* CreateUsernameViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -134,8 +157,18 @@
 		4B3C8AEB210649FA0053877E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				4B55C754210FC46300A5E6F4 /* UserService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		4B55C758210FC98400A5E6F4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4B55C759210FC9A000A5E6F4 /* Storyboard+Utility.swift */,
+			);
+			name = Extensions;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		4BCAFBA121079ACF00556C7A /* Helpers */ = {
@@ -176,6 +209,7 @@
 				4B3C8ACC210643FC0053877E /* Frameworks */,
 				4B3C8ACD210643FC0053877E /* Resources */,
 				C6F57E7C743A80134E03390B /* [CP] Embed Pods Frameworks */,
+				C67C5533162E554234F37820 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,6 +268,8 @@
 			files = (
 				4B3C8ADD210643FD0053877E /* LaunchScreen.storyboard in Resources */,
 				4B3C8ADA210643FD0053877E /* Assets.xcassets in Resources */,
+				4B55C753210F92C000A5E6F4 /* GoogleService-Info.plist in Resources */,
+				4B55C74B210F8AE000A5E6F4 /* Login.storyboard in Resources */,
 				4B3C8AD8210643FC0053877E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +295,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C67C5533162E554234F37820 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MapText/Pods-MapText-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MapText/Pods-MapText-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C6F57E7C743A80134E03390B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -267,10 +321,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MapText/Pods-MapText-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -284,13 +346,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B55C74D210F8B1600A5E6F4 /* LoginViewController.swift in Sources */,
 				4BCAFB9C21068F3E00556C7A /* DisplayLocationTableViewCell.swift in Sources */,
 				4BCAFB9E2106925100556C7A /* ModifyLocationViewController.swift in Sources */,
 				4B81F042210B946100AE07C8 /* RefreshDelegate.swift in Sources */,
 				4BCAFBA321079ADC00556C7A /* CoreDataHelper.swift in Sources */,
+				4B55C75A210FC9A000A5E6F4 /* Storyboard+Utility.swift in Sources */,
 				4B6B7B18210A5F3000800F28 /* SMSHelper.swift in Sources */,
 				4B3C8AD3210643FC0053877E /* AppDelegate.swift in Sources */,
+				4B55C757210FC92E00A5E6F4 /* Constants.swift in Sources */,
 				4BCAFB9A21068DCF00556C7A /* DisplayLocationTableViewController.swift in Sources */,
+				4B55C755210FC46300A5E6F4 /* UserService.swift in Sources */,
+				4B55C74F210F8E2B00A5E6F4 /* User.swift in Sources */,
+				4B55C751210F8EC600A5E6F4 /* CreateUsernameViewController.swift in Sources */,
 				4BCAFBA621079D6800556C7A /* MapText.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

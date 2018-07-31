@@ -20,15 +20,11 @@ class User: Codable {
         return currentUser
     }
     static func setCurrent(_ user: User, writeToUserDefaults: Bool = false) {
-        // 2
         if writeToUserDefaults {
-            // 3
             if let data = try? JSONEncoder().encode(user) {
-                // 4
                 UserDefaults.standard.set(data, forKey: Constants.UserDefaults.currentUser)
             }
         }
-        
         _current = user
     }
     let uid: String
@@ -38,11 +34,11 @@ class User: Codable {
         self.username = username
     }
     init?(snapshot: DataSnapshot) {
-    guard let dict = snapshot.value as? [String : Any],
-    let username = dict["username"] as? String
-    else { return nil }
+        guard let dict = snapshot.value as? [String : Any],
+            let username = dict["username"] as? String
+        else { return nil }
     
-    self.uid = snapshot.key
-    self.username = username
+        self.uid = snapshot.key
+        self.username = username
     }
 }

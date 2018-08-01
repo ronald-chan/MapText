@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let locs=CoreDataHelper.retrieveLocations()
+        let locs:[NotificationLocation]=[]//CoreDataHelper.retrieveLocations()
         currentLoc=CLLocation(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude)
         if let prev=prevLoc {
             print(prev.distance(from: currentLoc!) )

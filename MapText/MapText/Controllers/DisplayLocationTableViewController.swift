@@ -8,14 +8,13 @@
 
 import Foundation
 import UIKit
-class DislayLocationTableViewController:UITableViewController,RefreshDelegate{
+class DislayLocationTableViewController:UITableViewController {
     
     var locs=[NotificationLocation]() {
         didSet {
             tableView.reloadData()
         }
     }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier=segue.identifier else { return }
         switch identifier
@@ -34,7 +33,7 @@ class DislayLocationTableViewController:UITableViewController,RefreshDelegate{
         }
     }
     @IBAction func unwindWithSegue(_ segue:UIStoryboardSegue) {
-        locs=CoreDataHelper.retrieveLocations()
+        //locs=CoreDataHelper.retrieveLocations()
     }
     
     override func tableView(_ tableView:UITableView, numberOfRowsInSection section:Int)-> Int {
@@ -42,12 +41,15 @@ class DislayLocationTableViewController:UITableViewController,RefreshDelegate{
     }
     
     override func tableView(_ tableView:UITableView, cellForRowAt indexPath: IndexPath)->UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "locationTableViewCell", for: indexPath) as! DisplayLocationTableViewCell
         let loc=locs[indexPath.row]
+        cell.loc=loc
         cell.locationName.text = loc.name
         cell.locationCoordinates.text = "\(loc.latitude)º N, \(loc.longitude)º W"
-        cell.index=indexPath.row
         cell.locationActive.setOn(loc.locationActive, animated: false)
+        
+        
         return cell
     }
     
@@ -56,17 +58,19 @@ class DislayLocationTableViewController:UITableViewController,RefreshDelegate{
         if editingStyle == .delete
         {
             let locToDelete=locs[indexPath.row]
-            CoreDataHelper.delete(loc:locToDelete)
-            locs=CoreDataHelper.retrieveLocations()
+            LocationService.removeLocation(key: locToDelete.key!)
+            locs.remove(at: indexPath.row)
+            tableView.reloadData()
         }
-    }
-    
-    func refresh() {
-        tableView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        locs=CoreDataHelper.retrieveLocations()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        UserService.locs(for: User.current) { (locs) in
+            self.locs = locs
+            self.tableView.reloadData()
+        }
     }
 }

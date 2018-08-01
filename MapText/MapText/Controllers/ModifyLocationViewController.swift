@@ -26,28 +26,27 @@ class ModifyLocationViewController:UIViewController {
         switch identifier
         {
         case "save" where loc == nil:
-            let loc=CoreDataHelper.newLocation()
+            let loc=NotificationLocation(lat: 0.0,long: 0.0,name: "")
             loc.name=locationTextField.text ?? ""
             loc.latitude=Double(latitudeTextField.text!) ?? 0.0
             loc.longitude=Double(longitudeTextField.text!) ?? 0.0
-            loc.phone1=Int64(phone1TextField.text!) ?? -1
-            loc.phone2=Int64(phone2TextField.text!) ?? -1
-            loc.phone3=Int64(phone3TextField.text!) ?? -1
-            loc.phone4=Int64(phone4TextField.text!) ?? -1
+            loc.phone1=Int(phone1TextField.text!) ?? -1
+            loc.phone2=Int(phone2TextField.text!) ?? -1
+            loc.phone3=Int(phone3TextField.text!) ?? -1
+            loc.phone4=Int(phone4TextField.text!) ?? -1
             loc.locationActive=true
             loc.recentlyTriggered=false
-            LocationService.editLocation(loc: loc)
-            CoreDataHelper.saveLocation()
+            LocationService.newLocation(loc: loc)
         case "save" where loc != nil:
+            LocationService.removeLocation(key: loc!.key!)
             loc?.name=locationTextField.text ?? ""
             loc?.latitude=Double(latitudeTextField.text!) ?? 0.0
             loc?.longitude=Double(longitudeTextField.text!) ?? 0.0
-            loc?.phone1=Int64(phone1TextField.text!) ?? -1
-            loc?.phone2=Int64(phone2TextField.text!) ?? -1
-            loc?.phone3=Int64(phone3TextField.text!) ?? -1
-            loc?.phone4=Int64(phone4TextField.text!) ?? -1
-            LocationService.editLocation(loc: loc!)
-            CoreDataHelper.saveLocation()
+            loc?.phone1=Int(phone1TextField.text!) ?? -1
+            loc?.phone2=Int(phone2TextField.text!) ?? -1
+            loc?.phone3=Int(phone3TextField.text!) ?? -1
+            loc?.phone4=Int(phone4TextField.text!) ?? -1
+            LocationService.newLocation(loc: loc!)
         case "cancel":
             print("Cancel")
         default:
@@ -60,12 +59,12 @@ class ModifyLocationViewController:UIViewController {
         if let loc=loc {
             print("loc found")
             locationTextField.text=loc.name
-            longitudeTextField.text=String(loc.longitude)
-            latitudeTextField.text=String(loc.latitude)
-            phone1TextField.text=String(loc.phone1)
-            phone2TextField.text=String(loc.phone2)
-            phone3TextField.text=String(loc.phone3)
-            phone4TextField.text=String(loc.phone4)
+            longitudeTextField.text=String("\(loc.longitude)")
+            latitudeTextField.text=String("\(loc.latitude)")
+            phone1TextField.text=String("\(loc.phone1)")
+            phone2TextField.text=String("\(loc.phone2)")
+            phone3TextField.text=String("\(loc.phone3)")
+            phone4TextField.text=String("\(loc.phone4)")
         }
         else {
             print("loc not found")

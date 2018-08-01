@@ -20,13 +20,12 @@
 		4B55C757210FC92E00A5E6F4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B55C756210FC92E00A5E6F4 /* Constants.swift */; };
 		4B55C75A210FC9A000A5E6F4 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B55C759210FC9A000A5E6F4 /* Storyboard+Utility.swift */; };
 		4B55C75C2110C13100A5E6F4 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B55C75B2110C13100A5E6F4 /* LocationService.swift */; };
+		4B55C7602110FE8600A5E6F4 /* NotificationLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B55C75F2110FE8600A5E6F4 /* NotificationLocation.swift */; };
 		4B6B7B18210A5F3000800F28 /* SMSHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6B7B17210A5F3000800F28 /* SMSHelper.swift */; };
 		4B81F042210B946100AE07C8 /* RefreshDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B81F041210B946100AE07C8 /* RefreshDelegate.swift */; };
 		4BCAFB9A21068DCF00556C7A /* DisplayLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCAFB9921068DCF00556C7A /* DisplayLocationTableViewController.swift */; };
 		4BCAFB9C21068F3E00556C7A /* DisplayLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCAFB9B21068F3E00556C7A /* DisplayLocationTableViewCell.swift */; };
 		4BCAFB9E2106925100556C7A /* ModifyLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCAFB9D2106925100556C7A /* ModifyLocationViewController.swift */; };
-		4BCAFBA321079ADC00556C7A /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCAFBA221079ADC00556C7A /* CoreDataHelper.swift */; };
-		4BCAFBA621079D6800556C7A /* MapText.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4BCAFBA421079D6800556C7A /* MapText.xcdatamodeld */; };
 		7BD1A8B204EB3E33978A1C34 /* Pods_MapText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E3672D00E152B4FCFF3DE2 /* Pods_MapText.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,13 +45,12 @@
 		4B55C756210FC92E00A5E6F4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4B55C759210FC9A000A5E6F4 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
 		4B55C75B2110C13100A5E6F4 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		4B55C75F2110FE8600A5E6F4 /* NotificationLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationLocation.swift; sourceTree = "<group>"; };
 		4B6B7B17210A5F3000800F28 /* SMSHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSHelper.swift; sourceTree = "<group>"; };
 		4B81F041210B946100AE07C8 /* RefreshDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshDelegate.swift; sourceTree = "<group>"; };
 		4BCAFB9921068DCF00556C7A /* DisplayLocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLocationTableViewController.swift; sourceTree = "<group>"; };
 		4BCAFB9B21068F3E00556C7A /* DisplayLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLocationTableViewCell.swift; sourceTree = "<group>"; };
 		4BCAFB9D2106925100556C7A /* ModifyLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyLocationViewController.swift; sourceTree = "<group>"; };
-		4BCAFBA221079ADC00556C7A /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
-		4BCAFBA521079D6800556C7A /* MapText.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MapText.xcdatamodel; sourceTree = "<group>"; };
 		4BCAFBA72108E8AE00556C7A /* MapText.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MapText.entitlements; sourceTree = "<group>"; };
 		CA82F9FCA63A8138098038CF /* Pods-MapText.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapText.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapText/Pods-MapText.release.xcconfig"; sourceTree = "<group>"; };
 		E1E3672D00E152B4FCFF3DE2 /* Pods_MapText.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapText.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,8 +107,8 @@
 		4B3C8AE4210648EA0053877E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4BCAFBA421079D6800556C7A /* MapText.xcdatamodeld */,
 				4B55C74E210F8E2B00A5E6F4 /* User.swift */,
+				4B55C75F2110FE8600A5E6F4 /* NotificationLocation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,7 +175,6 @@
 		4BCAFBA121079ACF00556C7A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				4BCAFBA221079ADC00556C7A /* CoreDataHelper.swift */,
 				4B6B7B17210A5F3000800F28 /* SMSHelper.swift */,
 			);
 			path = Helpers;
@@ -353,7 +350,7 @@
 				4BCAFB9C21068F3E00556C7A /* DisplayLocationTableViewCell.swift in Sources */,
 				4BCAFB9E2106925100556C7A /* ModifyLocationViewController.swift in Sources */,
 				4B81F042210B946100AE07C8 /* RefreshDelegate.swift in Sources */,
-				4BCAFBA321079ADC00556C7A /* CoreDataHelper.swift in Sources */,
+				4B55C7602110FE8600A5E6F4 /* NotificationLocation.swift in Sources */,
 				4B55C75A210FC9A000A5E6F4 /* Storyboard+Utility.swift in Sources */,
 				4B6B7B18210A5F3000800F28 /* SMSHelper.swift in Sources */,
 				4B55C75C2110C13100A5E6F4 /* LocationService.swift in Sources */,
@@ -363,7 +360,6 @@
 				4B55C755210FC46300A5E6F4 /* UserService.swift in Sources */,
 				4B55C74F210F8E2B00A5E6F4 /* User.swift in Sources */,
 				4B55C751210F8EC600A5E6F4 /* CreateUsernameViewController.swift in Sources */,
-				4BCAFBA621079D6800556C7A /* MapText.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,19 +559,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		4BCAFBA421079D6800556C7A /* MapText.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				4BCAFBA521079D6800556C7A /* MapText.xcdatamodel */,
-			);
-			currentVersion = 4BCAFBA521079D6800556C7A /* MapText.xcdatamodel */;
-			path = MapText.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 4B3C8AC7210643FC0053877E /* Project object */;
 }

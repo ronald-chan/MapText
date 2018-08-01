@@ -10,14 +10,27 @@ import Foundation
 import FirebaseDatabase
 import FirebaseAuth.FIRUser
 struct LocationService {
-    static func editLocation(loc:NotificationLocation) {
-        let userRef=Database.database().reference().child("users").child(User.current.uid).child("locations").child(loc.name!)
-        let locDict=["latitude":loc.latitude,
+    static func newLocation(loc:NotificationLocation) {
+        let userRef=Database.database().reference().child("locations").child(User.current.uid).childByAutoId()
+        let key=userRef.key
+        let locDict=["name":loc.name,
+                     "latitude":loc.latitude,
                      "longitude":loc.longitude,
                      "phone1":loc.phone1,
                      "phone2":loc.phone2,
                      "phone3":loc.phone3,
-                     "phone4":loc.phone4,] as [String : Any]
+                     "phone4":loc.phone4,
+                     "locationActive":loc.locationActive,
+                     "key":key] as [String : Any]
         userRef.updateChildValues(locDict)
+    }
+    static func removeLocation(key:String) {
+        let userRef=Database.database().reference().child("locations").child(User.current.uid).child(key)
+        userRef.removeValue()
+    }
+    static func updateValue(locKey:String,key:String,val:Any) {
+        let userRef=Database.database().reference().child("locations").child(User.current.uid).child(locKey)
+        userRef.updateChildValues([key:val])
+        
     }
 }

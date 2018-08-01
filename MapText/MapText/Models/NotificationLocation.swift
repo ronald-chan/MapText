@@ -18,7 +18,6 @@ class NotificationLocation {
         }
         return currentLoc
     }
-    
     var latitude:Double
     var locationActive:Bool=false
     var recentlyTriggered:Bool=false
@@ -35,6 +34,18 @@ class NotificationLocation {
         latitude=lat
         longitude=long
         self.name=name
+    }
+    init(loc:NotificationLocation) {
+        latitude=loc.latitude
+        longitude=loc.longitude
+        locationActive=loc.locationActive
+        recentlyTriggered=loc.recentlyTriggered
+        name=loc.name
+        phone1=loc.phone1
+        phone2=loc.phone2
+        phone3=loc.phone3
+        phone4=loc.phone4
+        key=loc.key
     }
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String : Any],

@@ -21,6 +21,9 @@
 		4B55C75A210FC9A000A5E6F4 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B55C759210FC9A000A5E6F4 /* Storyboard+Utility.swift */; };
 		4B55C75C2110C13100A5E6F4 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B55C75B2110C13100A5E6F4 /* LocationService.swift */; };
 		4B55C7602110FE8600A5E6F4 /* NotificationLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B55C75F2110FE8600A5E6F4 /* NotificationLocation.swift */; };
+		4B55C7642112291200A5E6F4 /* EditLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B55C7632112291200A5E6F4 /* EditLocationViewController.swift */; };
+		4B55C7662112294200A5E6F4 /* EditPhoneNumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B55C7652112294200A5E6F4 /* EditPhoneNumbersViewController.swift */; };
+		4B55C7682112296800A5E6F4 /* EditLocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B55C7672112296800A5E6F4 /* EditLocationDetailsViewController.swift */; };
 		4B6B7B18210A5F3000800F28 /* SMSHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6B7B17210A5F3000800F28 /* SMSHelper.swift */; };
 		4B81F042210B946100AE07C8 /* RefreshDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B81F041210B946100AE07C8 /* RefreshDelegate.swift */; };
 		4BCAFB9A21068DCF00556C7A /* DisplayLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCAFB9921068DCF00556C7A /* DisplayLocationTableViewController.swift */; };
@@ -46,6 +49,9 @@
 		4B55C759210FC9A000A5E6F4 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
 		4B55C75B2110C13100A5E6F4 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		4B55C75F2110FE8600A5E6F4 /* NotificationLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationLocation.swift; sourceTree = "<group>"; };
+		4B55C7632112291200A5E6F4 /* EditLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLocationViewController.swift; sourceTree = "<group>"; };
+		4B55C7652112294200A5E6F4 /* EditPhoneNumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhoneNumbersViewController.swift; sourceTree = "<group>"; };
+		4B55C7672112296800A5E6F4 /* EditLocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLocationDetailsViewController.swift; sourceTree = "<group>"; };
 		4B6B7B17210A5F3000800F28 /* SMSHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSHelper.swift; sourceTree = "<group>"; };
 		4B81F041210B946100AE07C8 /* RefreshDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshDelegate.swift; sourceTree = "<group>"; };
 		4BCAFB9921068DCF00556C7A /* DisplayLocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLocationTableViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +148,9 @@
 				4BCAFB9D2106925100556C7A /* ModifyLocationViewController.swift */,
 				4B55C74C210F8B1600A5E6F4 /* LoginViewController.swift */,
 				4B55C750210F8EC600A5E6F4 /* CreateUsernameViewController.swift */,
+				4B55C7672112296800A5E6F4 /* EditLocationDetailsViewController.swift */,
+				4B55C7632112291200A5E6F4 /* EditLocationViewController.swift */,
+				4B55C7652112294200A5E6F4 /* EditPhoneNumbersViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -346,15 +355,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B55C7642112291200A5E6F4 /* EditLocationViewController.swift in Sources */,
 				4B55C74D210F8B1600A5E6F4 /* LoginViewController.swift in Sources */,
 				4BCAFB9C21068F3E00556C7A /* DisplayLocationTableViewCell.swift in Sources */,
 				4BCAFB9E2106925100556C7A /* ModifyLocationViewController.swift in Sources */,
 				4B81F042210B946100AE07C8 /* RefreshDelegate.swift in Sources */,
 				4B55C7602110FE8600A5E6F4 /* NotificationLocation.swift in Sources */,
 				4B55C75A210FC9A000A5E6F4 /* Storyboard+Utility.swift in Sources */,
+				4B55C7682112296800A5E6F4 /* EditLocationDetailsViewController.swift in Sources */,
 				4B6B7B18210A5F3000800F28 /* SMSHelper.swift in Sources */,
 				4B55C75C2110C13100A5E6F4 /* LocationService.swift in Sources */,
 				4B3C8AD3210643FC0053877E /* AppDelegate.swift in Sources */,
+				4B55C7662112294200A5E6F4 /* EditPhoneNumbersViewController.swift in Sources */,
 				4B55C757210FC92E00A5E6F4 /* Constants.swift in Sources */,
 				4BCAFB9A21068DCF00556C7A /* DisplayLocationTableViewController.swift in Sources */,
 				4B55C755210FC46300A5E6F4 /* UserService.swift in Sources */,

@@ -21,18 +21,20 @@ class DislayLocationTableViewController:UITableViewController {
         {
         case "modify":
             guard let indexPath=tableView.indexPathForSelectedRow else {return}
-            let loc=locs[indexPath.row]
-            let destination=segue.destination as! ModifyLocationViewController
+            let loc=NotificationLocation(loc:locs[indexPath.row])
+            let destination=segue.destination as! EditLocationDetailsViewController
             destination.loc=loc
-            
+            destination.orig=locs[indexPath.row]
             print()
         case "add":
-            print()
+            let loc=NotificationLocation(lat:0, long:0, name:"")
+            let destination=segue.destination as! EditLocationDetailsViewController
+            destination.loc=loc
         default:
             print("unexpected segue identifier")
         }
     }
-    @IBAction func unwindWithSegue(_ segue:UIStoryboardSegue) {
+    @IBAction func unwindToHome(_ segue:UIStoryboardSegue) {
         //locs=CoreDataHelper.retrieveLocations()
     }
     
@@ -59,7 +61,6 @@ class DislayLocationTableViewController:UITableViewController {
         {
             let locToDelete=locs[indexPath.row]
             LocationService.removeLocation(key: locToDelete.key!)
-            locs.remove(at: indexPath.row)
             tableView.reloadData()
         }
     }

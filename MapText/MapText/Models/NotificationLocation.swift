@@ -55,7 +55,6 @@ class NotificationLocation {
             let phone2=dict["phone2"] as? Int,
             let phone3=dict["phone3"] as? Int,
             let phone4=dict["phone4"] as? Int,
-            let key=dict["key"] as? String,
             let name=dict["name"] as? String,
             let locationActive=dict["locationActive"] as? Bool
             else { return nil }
@@ -67,7 +66,7 @@ class NotificationLocation {
         self.phone3=phone3
         self.phone4=phone4
         self.name=name
-        self.key=key
+        self.key=snapshot.key
         self.locationActive=locationActive
     }
 }

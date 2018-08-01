@@ -20,8 +20,7 @@ struct LocationService {
                      "phone2":loc.phone2,
                      "phone3":loc.phone3,
                      "phone4":loc.phone4,
-                     "locationActive":loc.locationActive,
-                     "key":key] as [String : Any]
+                     "locationActive":loc.locationActive] as [String : Any]
         userRef.updateChildValues(locDict)
     }
     static func removeLocation(key:String) {

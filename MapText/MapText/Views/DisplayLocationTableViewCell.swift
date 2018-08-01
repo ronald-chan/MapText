@@ -18,7 +18,6 @@ class DisplayLocationTableViewCell:UITableViewCell {
     @IBAction func locationActiveSwitchFlipped(_ sender: Any) {
         loc?.locationActive=locationActive.isOn
         //CoreDataHelper.saveLocation()
-        print(loc?.locationActive)
         LocationService.updateValue(locKey: loc!.key!, key: "locationActive", val: loc?.locationActive)
     }
 }

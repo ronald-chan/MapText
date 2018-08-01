@@ -17,9 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     var locationManager: CLLocationManager!
     var currentLoc:CLLocation?
     var prevLoc:CLLocation?
+    var locs:[NotificationLocation]=[]
+    var appActive:Bool=true
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        
         configureInitialRootViewController(for: window)
         initLocationManager()
         return true
@@ -30,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.distanceFilter=3
+        locationManager.distanceFilter=30
         locationManager.requestAlwaysAuthorization()
         if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways {
             print("authorized")
@@ -40,19 +44,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let locs:[NotificationLocation]=[]//CoreDataHelper.retrieveLocations()
+        if appActive {
+            UserService.locs(for: User.current) { (locs) in
+                self.locs = locs
+            }
+        }
         currentLoc=CLLocation(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude)
         if let prev=prevLoc {
             print(prev.distance(from: currentLoc!) )
             for loc in locs {
                 if loc.locationActive {
                     let formatted=CLLocation(latitude: loc.latitude, longitude: loc.longitude)
-                    if !loc.recentlyTriggered && formatted.distance(from: currentLoc!)<10 {
+                    if !loc.recentlyTriggered && formatted.distance(from: currentLoc!)<100 {
                         //SMSHelper.sendMessage(loc: loc) //uncomment this to send text
                         print("send text")
                         loc.recentlyTriggered=true
                     }
-                    if formatted.distance(from: currentLoc!)>30 {
+                    if formatted.distance(from: currentLoc!)>300 {
                         loc.recentlyTriggered=false
                     }
                 }
@@ -60,6 +68,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         }
         prevLoc=currentLoc
     }
+    
+    
     
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -69,6 +79,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        appActive=false
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {

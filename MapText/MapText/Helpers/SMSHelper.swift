@@ -13,15 +13,18 @@ class SMSHelper {
         let headers = [
             "Content-Type": "application/x-www-form-urlencoded"
         ]
-        
-        let parameters: Parameters = [
-            "To": loc.phone1,
-            "Body": "User arrived at \(loc.name). "
-        ]
-        
-        Alamofire.request("https://snow-labradoodle-8297.twil.io/sms", method: .post, parameters: parameters, headers: headers).response { response in
-            print(response)
-            
+        let phoneNums=[loc.phone1,loc.phone2,loc.phone3,loc.phone4]
+        for num in phoneNums {
+            if let num=num {
+                let parameters: Parameters = [
+                    "To": num,
+                    "Body": "\(User.current.username) arrived within 100 meters of \(loc.name). "
+                ]
+                
+                Alamofire.request("https://snow-labradoodle-8297.twil.io/sms", method: .post, parameters: parameters, headers: headers).response { response in
+                    print(response)
+                }
+            }
         }
     }
     

@@ -24,11 +24,10 @@
 		4B55C7642112291200A5E6F4 /* EditLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B55C7632112291200A5E6F4 /* EditLocationViewController.swift */; };
 		4B55C7662112294200A5E6F4 /* EditPhoneNumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B55C7652112294200A5E6F4 /* EditPhoneNumbersViewController.swift */; };
 		4B55C7682112296800A5E6F4 /* EditLocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B55C7672112296800A5E6F4 /* EditLocationDetailsViewController.swift */; };
+		4B55C76A21126AED00A5E6F4 /* TextService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B55C76921126AED00A5E6F4 /* TextService.swift */; };
 		4B6B7B18210A5F3000800F28 /* SMSHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6B7B17210A5F3000800F28 /* SMSHelper.swift */; };
-		4B81F042210B946100AE07C8 /* RefreshDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B81F041210B946100AE07C8 /* RefreshDelegate.swift */; };
 		4BCAFB9A21068DCF00556C7A /* DisplayLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCAFB9921068DCF00556C7A /* DisplayLocationTableViewController.swift */; };
 		4BCAFB9C21068F3E00556C7A /* DisplayLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCAFB9B21068F3E00556C7A /* DisplayLocationTableViewCell.swift */; };
-		4BCAFB9E2106925100556C7A /* ModifyLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCAFB9D2106925100556C7A /* ModifyLocationViewController.swift */; };
 		7BD1A8B204EB3E33978A1C34 /* Pods_MapText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E3672D00E152B4FCFF3DE2 /* Pods_MapText.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,11 +51,10 @@
 		4B55C7632112291200A5E6F4 /* EditLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLocationViewController.swift; sourceTree = "<group>"; };
 		4B55C7652112294200A5E6F4 /* EditPhoneNumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhoneNumbersViewController.swift; sourceTree = "<group>"; };
 		4B55C7672112296800A5E6F4 /* EditLocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLocationDetailsViewController.swift; sourceTree = "<group>"; };
+		4B55C76921126AED00A5E6F4 /* TextService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextService.swift; sourceTree = "<group>"; };
 		4B6B7B17210A5F3000800F28 /* SMSHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSHelper.swift; sourceTree = "<group>"; };
-		4B81F041210B946100AE07C8 /* RefreshDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshDelegate.swift; sourceTree = "<group>"; };
 		4BCAFB9921068DCF00556C7A /* DisplayLocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLocationTableViewController.swift; sourceTree = "<group>"; };
 		4BCAFB9B21068F3E00556C7A /* DisplayLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLocationTableViewCell.swift; sourceTree = "<group>"; };
-		4BCAFB9D2106925100556C7A /* ModifyLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyLocationViewController.swift; sourceTree = "<group>"; };
 		4BCAFBA72108E8AE00556C7A /* MapText.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MapText.entitlements; sourceTree = "<group>"; };
 		CA82F9FCA63A8138098038CF /* Pods-MapText.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapText.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapText/Pods-MapText.release.xcconfig"; sourceTree = "<group>"; };
 		E1E3672D00E152B4FCFF3DE2 /* Pods_MapText.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapText.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,7 +123,6 @@
 				4B3C8ADE210643FD0053877E /* Info.plist */,
 				4B55C752210F92C000A5E6F4 /* GoogleService-Info.plist */,
 				4B3C8AD9210643FD0053877E /* Assets.xcassets */,
-				4B81F041210B946100AE07C8 /* RefreshDelegate.swift */,
 				4B55C756210FC92E00A5E6F4 /* Constants.swift */,
 			);
 			path = "Supporting Files";
@@ -144,9 +141,8 @@
 		4B3C8AE7210649700053877E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4BCAFB9921068DCF00556C7A /* DisplayLocationTableViewController.swift */,
-				4BCAFB9D2106925100556C7A /* ModifyLocationViewController.swift */,
 				4B55C74C210F8B1600A5E6F4 /* LoginViewController.swift */,
+				4BCAFB9921068DCF00556C7A /* DisplayLocationTableViewController.swift */,
 				4B55C750210F8EC600A5E6F4 /* CreateUsernameViewController.swift */,
 				4B55C7672112296800A5E6F4 /* EditLocationDetailsViewController.swift */,
 				4B55C7632112291200A5E6F4 /* EditLocationViewController.swift */,
@@ -168,6 +164,7 @@
 			children = (
 				4B55C754210FC46300A5E6F4 /* UserService.swift */,
 				4B55C75B2110C13100A5E6F4 /* LocationService.swift */,
+				4B55C76921126AED00A5E6F4 /* TextService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -357,9 +354,8 @@
 			files = (
 				4B55C7642112291200A5E6F4 /* EditLocationViewController.swift in Sources */,
 				4B55C74D210F8B1600A5E6F4 /* LoginViewController.swift in Sources */,
+				4B55C76A21126AED00A5E6F4 /* TextService.swift in Sources */,
 				4BCAFB9C21068F3E00556C7A /* DisplayLocationTableViewCell.swift in Sources */,
-				4BCAFB9E2106925100556C7A /* ModifyLocationViewController.swift in Sources */,
-				4B81F042210B946100AE07C8 /* RefreshDelegate.swift in Sources */,
 				4B55C7602110FE8600A5E6F4 /* NotificationLocation.swift in Sources */,
 				4B55C75A210FC9A000A5E6F4 /* Storyboard+Utility.swift in Sources */,
 				4B55C7682112296800A5E6F4 /* EditLocationDetailsViewController.swift in Sources */,

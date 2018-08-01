@@ -25,7 +25,6 @@ class DislayLocationTableViewController:UITableViewController {
             let destination=segue.destination as! EditLocationDetailsViewController
             destination.loc=loc
             destination.orig=locs[indexPath.row]
-            print()
         case "add":
             let loc=NotificationLocation(lat:0, long:0, name:"")
             let destination=segue.destination as! EditLocationDetailsViewController
@@ -67,6 +66,7 @@ class DislayLocationTableViewController:UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         UserService.locs(for: User.current) { (locs) in

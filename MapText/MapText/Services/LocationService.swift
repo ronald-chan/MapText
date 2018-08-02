@@ -14,6 +14,7 @@ struct LocationService {
         let userRef=Database.database().reference().child("locations").child(User.current.uid).childByAutoId()
         let key=userRef.key
         let locDict=["name":loc.name,
+                     "notes":loc.notes,
                      "latitude":loc.latitude,
                      "longitude":loc.longitude,
                      "phone1":loc.phone1,

@@ -11,18 +11,21 @@ import UIKit
 class EditLocationDetailsViewController:UIViewController {
     
     @IBOutlet weak var locationTextField: UITextField!
+    @IBOutlet weak var notesTextField: UITextField!
     
     var loc:NotificationLocation?
     var orig:NotificationLocation?
     override func viewWillAppear(_ animated: Bool) {
         if let loc=loc {
             locationTextField.text=loc.name
+            notesTextField.text=loc.notes
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier=="toLocation" {
             if let loc=loc {
                 loc.name=locationTextField.text ?? ""
+                loc.notes=notesTextField.text ?? ""
             }
             let destination=segue.destination as! EditLocationViewController
             destination.loc=loc

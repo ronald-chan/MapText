@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     var currentLoc:CLLocation?
     var prevLoc:CLLocation?
     var locs:[NotificationLocation]=[]
-    var appActive:Bool=true
+    var appActive:Bool=false
+    static var loggedIn=false
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
@@ -44,29 +45,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if appActive {
-            UserService.locs(for: User.current) { (locs) in
-                self.locs = locs
+        if AppDelegate.loggedIn {
+            if appActive {
+                UserService.locs(for: User.current) { (locs) in
+                    self.locs = locs
+                }
             }
-        }
-        currentLoc=CLLocation(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude)
-        if let prev=prevLoc {
-            print(prev.distance(from: currentLoc!) )
-            for loc in locs {
-                if loc.locationActive {
-                    let formatted=CLLocation(latitude: loc.latitude, longitude: loc.longitude)
-                    if !loc.recentlyTriggered && formatted.distance(from: currentLoc!)<100 {
-                        //SMSHelper.sendMessage(loc: loc) //uncomment this to send text
-                        print("send text")
-                        loc.recentlyTriggered=true
-                    }
-                    if formatted.distance(from: currentLoc!)>300 {
-                        loc.recentlyTriggered=false
+            currentLoc=CLLocation(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude)
+            if let prev=prevLoc {
+                print(prev.distance(from: currentLoc!) )
+                for loc in locs {
+                    if loc.locationActive {
+                        let formatted=CLLocation(latitude: loc.latitude, longitude: loc.longitude)
+                        if !loc.recentlyTriggered && formatted.distance(from: currentLoc!)<100 {
+                            //SMSHelper.sendMessage(loc: loc) //uncomment this to send text
+                            print("send text")
+                            loc.recentlyTriggered=true
+                        }
+                        if formatted.distance(from: currentLoc!)>300 {
+                            loc.recentlyTriggered=false
+                        }
                     }
                 }
             }
+            prevLoc=currentLoc
         }
-        prevLoc=currentLoc
     }
     
     
@@ -147,6 +150,7 @@ extension AppDelegate {
             let userData = defaults.object(forKey: Constants.UserDefaults.currentUser) as? Data,
             let user = try? JSONDecoder().decode(User.self, from: userData) {
             User.setCurrent(user)
+            AppDelegate.loggedIn=true
             initialViewController = UIStoryboard.initialViewController(for: .main)
         } else {
             initialViewController = UIStoryboard.initialViewController(for: .login)

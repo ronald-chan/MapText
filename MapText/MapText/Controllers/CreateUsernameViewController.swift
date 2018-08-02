@@ -31,5 +31,6 @@ class CreateUsernameViewController: UIViewController {
                 self.view.window?.makeKeyAndVisible()
             }
         }
+        AppDelegate.loggedIn=true
     }
 }

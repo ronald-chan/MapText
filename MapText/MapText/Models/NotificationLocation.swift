@@ -23,6 +23,7 @@ class NotificationLocation {
     var recentlyTriggered:Bool=false
     var longitude:Double
     var name:String
+    var notes:String?
     var phone1:Int?
     var phone2:Int?
     var phone3:Int?
@@ -41,6 +42,7 @@ class NotificationLocation {
         locationActive=loc.locationActive
         recentlyTriggered=loc.recentlyTriggered
         name=loc.name
+        notes=loc.notes
         phone1=loc.phone1
         phone2=loc.phone2
         phone3=loc.phone3
@@ -56,6 +58,7 @@ class NotificationLocation {
             let phone3=dict["phone3"] as? Int,
             let phone4=dict["phone4"] as? Int,
             let name=dict["name"] as? String,
+            let notes=dict["notes"] as? String,
             let locationActive=dict["locationActive"] as? Bool
             else { return nil }
         
@@ -66,6 +69,7 @@ class NotificationLocation {
         self.phone3=phone3
         self.phone4=phone4
         self.name=name
+        self.notes=notes
         self.key=snapshot.key
         self.locationActive=locationActive
     }

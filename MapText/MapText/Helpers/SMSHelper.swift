@@ -15,9 +15,9 @@ class SMSHelper {
         ]
         let phoneNums=[loc.phone1,loc.phone2,loc.phone3,loc.phone4]
         for num in phoneNums {
-            if let num=num {
+            if num != -1 {
                 let parameters: Parameters = [
-                    "To": num,
+                    "To": num!,
                     "Body": "\(User.current.username) arrived within 100 meters of \(loc.name). "
                 ]
                 

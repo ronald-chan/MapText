@@ -8,23 +8,43 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 class EditLocationViewController:UIViewController {
     
-    @IBOutlet weak var latitudeTextField: UITextField!
-    @IBOutlet weak var longitudeTextField: UITextField!
+    @IBOutlet weak var streetAddressTextField: UITextField!
     
+    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var stateTextField: UITextField!
+    
+    var geoCoder=CLGeocoder()
     var loc:NotificationLocation?
     var orig:NotificationLocation?
     override func viewWillAppear(_ animated: Bool) {
         if let loc=loc {
-            longitudeTextField.text=String("\(loc.longitude)")
-            latitudeTextField.text=String("\(loc.latitude)")
+            streetAddressTextField.text=loc.streetAddress
+            stateTextField.text=loc.state
+            cityTextField.text=loc.city
+//            longitudeTextField.text=String("\(loc.longitude)")
+//            latitudeTextField.text=String("\(loc.latitude)")
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let loc=loc {
-            loc.latitude=Double(latitudeTextField.text!) ?? 0.0
-            loc.longitude=Double(longitudeTextField.text!) ?? 0.0
+            loc.streetAddress=streetAddressTextField.text ?? ""
+            loc.state=stateTextField.text ?? ""
+            loc.city=cityTextField.text ?? ""
+            geoCoder.geocodeAddressString("\(loc.streetAddress), \(loc.city), \(loc.state)") { (placemarks, error) in
+                if error != nil {
+                    return
+                }
+                if let places=placemarks {
+                    let location=places[0].location
+                    loc.latitude=location?.coordinate.latitude ?? Double(Int.max)
+                    loc.longitude=location?.coordinate.longitude ?? Double(Int.max)
+                }
+            }
+//            loc.latitude=Double(latitudeTextField.text!) ?? 0.0
+//            loc.longitude=Double(longitudeTextField.text!) ?? 0.0
         }
         if segue.identifier=="toPhoneNumber" {            
             let destination=segue.destination as! EditPhoneNumbersViewController

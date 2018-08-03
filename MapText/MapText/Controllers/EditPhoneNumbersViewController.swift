@@ -48,6 +48,7 @@ class EditPhoneNumbersViewController:UIViewController {
             loc.phone2=Int(phone2TextField.text!) ?? -1
             loc.phone3=Int(phone3TextField.text!) ?? -1
             loc.phone4=Int(phone4TextField.text!) ?? -1
+            
             if let orig=orig {
                 LocationService.removeLocation(key: orig.key!)
             }

@@ -15,6 +15,9 @@ struct LocationService {
         let key=userRef.key
         let locDict=["name":loc.name,
                      "notes":loc.notes,
+                     "state":loc.state,
+                     "city":loc.city,
+                     "streetAddress":loc.streetAddress,
                      "latitude":loc.latitude,
                      "longitude":loc.longitude,
                      "phone1":loc.phone1,

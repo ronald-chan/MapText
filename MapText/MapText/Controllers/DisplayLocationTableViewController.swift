@@ -59,6 +59,7 @@ class DislayLocationTableViewController:UITableViewController {
         if editingStyle == .delete
         {
             let locToDelete=locs[indexPath.row]
+            locs.remove(at: indexPath.row)
             LocationService.removeLocation(key: locToDelete.key!)
             tableView.reloadData()
         }

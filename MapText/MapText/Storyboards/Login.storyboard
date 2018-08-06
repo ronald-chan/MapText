@@ -64,13 +64,21 @@
                                     <action selector="loginButtonTapped:" destination="5KA-hz-y9t" eventType="touchUpInside" id="TkO-ZC-nC6"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo by DAVID ILIFF. License: CC-BY-SA 3.0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73H-DD-dfh">
+                                <rect key="frame" x="78.5" y="646" width="218.5" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.26424774290000003" green="0.26424774290000003" blue="0.26424774290000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="LEo-U9-N1p" firstAttribute="top" secondItem="q8T-4y-gw5" secondAttribute="bottom" constant="25" id="0aJ-RW-vfa"/>
                             <constraint firstItem="q8T-4y-gw5" firstAttribute="top" secondItem="gWX-wf-dxz" secondAttribute="top" id="1QJ-5G-o3E"/>
                             <constraint firstItem="LEo-U9-N1p" firstAttribute="leading" secondItem="C4a-Sa-uuV" secondAttribute="leading" constant="25" id="6Qe-IU-UbE"/>
+                            <constraint firstItem="LEo-U9-N1p" firstAttribute="top" secondItem="q8T-4y-gw5" secondAttribute="bottom" constant="25" id="UxO-bL-Tyo"/>
                             <constraint firstItem="q8T-4y-gw5" firstAttribute="leading" secondItem="C4a-Sa-uuV" secondAttribute="leading" id="XBo-OE-D9o"/>
+                            <constraint firstItem="73H-DD-dfh" firstAttribute="centerX" secondItem="gWX-wf-dxz" secondAttribute="centerX" id="eTg-1k-imf"/>
+                            <constraint firstItem="C4a-Sa-uuV" firstAttribute="bottom" secondItem="73H-DD-dfh" secondAttribute="bottom" constant="9" id="rL0-1D-shs"/>
                             <constraint firstItem="C4a-Sa-uuV" firstAttribute="trailing" secondItem="q8T-4y-gw5" secondAttribute="trailing" id="zol-sZ-WdR"/>
                             <constraint firstItem="C4a-Sa-uuV" firstAttribute="trailing" secondItem="LEo-U9-N1p" secondAttribute="trailing" constant="25" id="zuv-ta-i3K"/>
                         </constraints>

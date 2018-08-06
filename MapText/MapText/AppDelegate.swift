@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.distanceFilter=1
+        locationManager.distanceFilter=30
         locationManager.requestAlwaysAuthorization()
         if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways {
             print("authorized")
@@ -64,7 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
                         let formatted=CLLocation(latitude: loc.latitude, longitude: loc.longitude)
                         if !loc.recentlyTriggered && formatted.distance(from: currentLoc!)<100 {
                             SMSHelper.sendMessage(loc: loc) //uncomment this to send text
-                            print("send text")
+                            //print("send text")
                             LocationService.updateValue(locKey: loc.key!, key: "recentlyTriggered", val: true)
                             loc.recentlyTriggered=true
                         }

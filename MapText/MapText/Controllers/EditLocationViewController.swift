@@ -26,6 +26,11 @@ class EditLocationViewController:UIViewController {
             cityTextField.text=loc.city
 //            longitudeTextField.text=String("\(loc.longitude)")
 //            latitudeTextField.text=String("\(loc.latitude)")
+            streetAddressTextField.becomeFirstResponder()
+            
+            streetAddressTextField.autocapitalizationType=UITextAutocapitalizationType.words
+            cityTextField.autocapitalizationType=UITextAutocapitalizationType.words
+            stateTextField.autocapitalizationType=UITextAutocapitalizationType.allCharacters
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

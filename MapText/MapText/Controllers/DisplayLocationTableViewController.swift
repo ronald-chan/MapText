@@ -47,7 +47,7 @@ class DislayLocationTableViewController:UITableViewController {
         let loc=locs[indexPath.row]
         cell.loc=loc
         cell.locationName.text = loc.name
-        cell.locationCoordinates.text = "\(loc.latitude)º N, \(loc.longitude)º W"
+        cell.locationCoordinates.text = "\(loc.city), \(loc.state)"
         cell.locationActive.setOn(loc.locationActive, animated: false)
         
         

@@ -24,16 +24,20 @@ struct LocationService {
                      "phone2":loc.phone2,
                      "phone3":loc.phone3,
                      "phone4":loc.phone4,
+                     "recentlyTriggered":loc.recentlyTriggered,
                      "locationActive":loc.locationActive] as [String : Any]
         userRef.updateChildValues(locDict)
+        AppDelegate.updated=false
     }
     static func removeLocation(key:String) {
         let userRef=Database.database().reference().child("locations").child(User.current.uid).child(key)
         userRef.removeValue()
+        AppDelegate.updated=false
     }
     static func updateValue(locKey:String,key:String,val:Any) {
         let userRef=Database.database().reference().child("locations").child(User.current.uid).child(locKey)
         userRef.updateChildValues([key:val])
+        AppDelegate.updated=false
         
     }
 }

@@ -39,6 +39,7 @@ class EditPhoneNumbersViewController:UIViewController {
                     textFields[i]?.text=""
                 }
             }
+            phone1TextField.becomeFirstResponder()
         }
     }
     func save() {

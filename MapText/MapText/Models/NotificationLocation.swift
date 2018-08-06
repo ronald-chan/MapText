@@ -20,7 +20,7 @@ class NotificationLocation {
     }
     var latitude:Double
     var locationActive:Bool=false
-    var recentlyTriggered:Bool=false
+    var recentlyTriggered:Bool=true
     var longitude:Double
     var name:String
     var city:String
@@ -71,6 +71,7 @@ class NotificationLocation {
             let phone4=dict["phone4"] as? Int,
             let name=dict["name"] as? String,
             let notes=dict["notes"] as? String,
+            let recent=dict["recentlyTriggered"] as? Bool,
             let locationActive=dict["locationActive"] as? Bool
             else { return nil }
         
@@ -87,5 +88,6 @@ class NotificationLocation {
         self.streetAddress=street
         self.city=city
         self.state=state
+        self.recentlyTriggered=recent
     }
 }

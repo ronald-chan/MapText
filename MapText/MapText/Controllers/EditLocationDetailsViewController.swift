@@ -19,6 +19,10 @@ class EditLocationDetailsViewController:UIViewController {
         if let loc=loc {
             locationTextField.text=loc.name
             notesTextField.text=loc.notes
+            locationTextField.autocapitalizationType=UITextAutocapitalizationType.words
+            locationTextField.becomeFirstResponder()
+            
+            notesTextField.autocapitalizationType=UITextAutocapitalizationType.sentences
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

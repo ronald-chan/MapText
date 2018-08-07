@@ -11,25 +11,25 @@ import UIKit
 class EditLocationDetailsViewController:UIViewController {
     
     @IBOutlet weak var locationTextField: UITextField!
-    @IBOutlet weak var notesTextField: UITextField!
-    
+    @IBOutlet weak var notesTextView: UITextView!
     var loc:NotificationLocation?
     var orig:NotificationLocation?
     override func viewWillAppear(_ animated: Bool) {
         if let loc=loc {
+            notesTextView.layer.cornerRadius=8
             locationTextField.text=loc.name
-            notesTextField.text=loc.notes
+            notesTextView.text=loc.notes
             locationTextField.autocapitalizationType=UITextAutocapitalizationType.words
             locationTextField.becomeFirstResponder()
             
-            notesTextField.autocapitalizationType=UITextAutocapitalizationType.sentences
+            notesTextView.autocapitalizationType=UITextAutocapitalizationType.sentences
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier=="toLocation" {
             if let loc=loc {
                 loc.name=locationTextField.text ?? ""
-                loc.notes=notesTextField.text ?? ""
+                loc.notes=notesTextView.text ?? ""
             }
             let destination=segue.destination as! EditLocationViewController
             destination.loc=loc

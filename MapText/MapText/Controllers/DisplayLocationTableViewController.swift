@@ -30,7 +30,7 @@ class DislayLocationTableViewController:UITableViewController {
             let destination=segue.destination as! EditLocationDetailsViewController
             destination.loc=loc
         default:
-            print("unexpected segue identifier")
+            //print("unexpected segue identifier")
         }
     }
     @IBAction func unwindToHome(_ segue:UIStoryboardSegue) {

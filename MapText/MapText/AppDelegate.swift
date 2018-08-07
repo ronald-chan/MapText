@@ -54,9 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             }
             currentLoc=CLLocation(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude)
             if let prev=prevLoc {
-                print(prev.distance(from: currentLoc!) )
                 for loc in locs {
-                    print(loc.name)
                     if loc.locationActive {
                         let formatted=CLLocation(latitude: loc.latitude, longitude: loc.longitude)
                         if !loc.recentlyTriggered && formatted.distance(from: currentLoc!)<100 {

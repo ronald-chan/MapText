@@ -152,17 +152,17 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Residence of the Head of State" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Byp-TE-JMY">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IqY-zp-Iex">
                                                 <rect key="frame" x="125" y="0.0" width="200" height="90"/>
-                                                <color key="backgroundColor" white="0.88413549800000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" red="0.92444719149999999" green="0.92444719149999999" blue="0.92444719149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="DB4-RI-8yr"/>
-                                                    <constraint firstAttribute="width" constant="200" id="N7f-B0-1ay"/>
+                                                    <constraint firstAttribute="height" constant="90" id="If6-GC-lRC"/>
+                                                    <constraint firstAttribute="width" constant="200" id="mLA-Fh-GBc"/>
                                                 </constraints>
-                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -198,7 +198,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="locationTextField" destination="D4Z-qY-HcD" id="fYu-ee-kVG"/>
-                        <outlet property="notesTextField" destination="Byp-TE-JMY" id="nDc-fW-wRr"/>
+                        <outlet property="notesTextView" destination="IqY-zp-Iex" id="Yi4-MY-ezR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZZ-Lb-ozl" userLabel="First Responder" sceneMemberID="firstResponder"/>

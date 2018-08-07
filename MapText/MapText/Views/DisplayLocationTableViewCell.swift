@@ -14,7 +14,6 @@ class DisplayLocationTableViewCell:UITableViewCell {
     @IBOutlet weak var locationCoordinates: UILabel!
     @IBOutlet weak var locationActive: UISwitch!
     var loc:NotificationLocation?
-    
     @IBAction func locationActiveSwitchFlipped(_ sender: Any) {
         loc?.locationActive=locationActive.isOn
         LocationService.updateValue(locKey: loc!.key!, key: "locationActive", val: loc?.locationActive)

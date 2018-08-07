@@ -18,7 +18,7 @@ class SMSHelper {
             if num != -1 {
                 let parameters: Parameters = [
                     "To": num!,
-                    "Body": "\(User.current.username) arrived within 100 meters of \(loc.name). "
+                    "Body": "Map Text: \(User.current.username) arrived within 100 meters of \(loc.name). "
                 ]
                 
                 Alamofire.request("https://snow-labradoodle-8297.twil.io/sms", method: .post, parameters: parameters, headers: headers).response { response in

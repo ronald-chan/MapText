@@ -21,7 +21,6 @@ class EditLocationDetailsViewController:UIViewController {
             notesTextView.text=loc.notes
             locationTextField.autocapitalizationType=UITextAutocapitalizationType.words
             locationTextField.becomeFirstResponder()
-            
             notesTextView.autocapitalizationType=UITextAutocapitalizationType.sentences
         }
     }

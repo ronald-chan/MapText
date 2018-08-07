@@ -37,6 +37,5 @@ class EditLocationDetailsViewController:UIViewController {
         }
     }
     @IBAction func unwindWithSegue(_ segue:UIStoryboardSegue) {
-        //locs=CoreDataHelper.retrieveLocations()
     }
 }

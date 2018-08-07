@@ -22,7 +22,6 @@ class SMSHelper {
                 ]
                 
                 Alamofire.request("https://snow-labradoodle-8297.twil.io/sms", method: .post, parameters: parameters, headers: headers).response { response in
-                    print(response)
                 }
             }
         }

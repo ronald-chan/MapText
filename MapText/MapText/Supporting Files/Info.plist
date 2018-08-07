@@ -23,7 +23,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>To detect proximity to set destinations</string>
+	<string>Select always to enable updates to send to families when app is in background.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>To detect proximity to set destinations</string>
 	<key>UIBackgroundModes</key>

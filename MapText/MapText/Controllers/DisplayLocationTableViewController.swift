@@ -34,7 +34,6 @@ class DislayLocationTableViewController:UITableViewController {
         }
     }
     @IBAction func unwindToHome(_ segue:UIStoryboardSegue) {
-        //locs=CoreDataHelper.retrieveLocations()
     }
     
     override func tableView(_ tableView:UITableView, numberOfRowsInSection section:Int)-> Int {
@@ -49,7 +48,6 @@ class DislayLocationTableViewController:UITableViewController {
         cell.locationName.text = loc.name
         cell.locationCoordinates.text = "\(loc.city), \(loc.state)"
         cell.locationActive.setOn(loc.locationActive, animated: false)
-        
         
         return cell
     }

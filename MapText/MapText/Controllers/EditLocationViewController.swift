@@ -24,8 +24,6 @@ class EditLocationViewController:UIViewController {
             streetAddressTextField.text=loc.streetAddress
             stateTextField.text=loc.state
             cityTextField.text=loc.city
-//            longitudeTextField.text=String("\(loc.longitude)")
-//            latitudeTextField.text=String("\(loc.latitude)")
             streetAddressTextField.becomeFirstResponder()
             
             streetAddressTextField.autocapitalizationType=UITextAutocapitalizationType.words
@@ -48,8 +46,6 @@ class EditLocationViewController:UIViewController {
                     loc.longitude=location?.coordinate.longitude ?? Double(Int.max)
                 }
             }
-//            loc.latitude=Double(latitudeTextField.text!) ?? 0.0
-//            loc.longitude=Double(longitudeTextField.text!) ?? 0.0
         }
         if segue.identifier=="toPhoneNumber" {            
             let destination=segue.destination as! EditPhoneNumbersViewController
@@ -58,6 +54,5 @@ class EditLocationViewController:UIViewController {
         }
     }
     @IBAction func unwindWithSegue(_ segue:UIStoryboardSegue) {
-        //locs=CoreDataHelper.retrieveLocations()
     }
 }

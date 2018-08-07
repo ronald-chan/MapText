@@ -39,7 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         locationManager.distanceFilter=30
         locationManager.requestAlwaysAuthorization()
         if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways {
-            print("authorized")
             locationManager.allowsBackgroundLocationUpdates=true
             locationManager.startUpdatingLocation()
         }
@@ -47,9 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if AppDelegate.loggedIn {
-            print("location grabbed")
             if appActive && !AppDelegate.updated{
-                print("locs grabbed")
                 UserService.locs(for: User.current) { (locs) in
                     self.locs = locs
                 }
@@ -63,8 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
                     if loc.locationActive {
                         let formatted=CLLocation(latitude: loc.latitude, longitude: loc.longitude)
                         if !loc.recentlyTriggered && formatted.distance(from: currentLoc!)<100 {
-                            SMSHelper.sendMessage(loc: loc) //uncomment this to send text
-                            //print("send text")
+                            SMSHelper.sendMessage(loc: loc)
                             LocationService.updateValue(locKey: loc.key!, key: "recentlyTriggered", val: true)
                             loc.recentlyTriggered=true
                         }

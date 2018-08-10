@@ -10,12 +10,16 @@ import Foundation
 import UIKit
 class EditLocationDetailsViewController:UIViewController {
     
+    @IBOutlet weak var notesLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var notesTextView: UITextView!
     var loc:NotificationLocation?
     var orig:NotificationLocation?
     override func viewWillAppear(_ animated: Bool) {
         if let loc=loc {
+            nameLabel.adjustsFontSizeToFitWidth=true
+            notesLabel.adjustsFontSizeToFitWidth=true
             notesTextView.layer.cornerRadius=8
             locationTextField.text=loc.name
             notesTextView.text=loc.notes

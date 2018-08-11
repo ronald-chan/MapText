@@ -56,6 +56,8 @@
 		4BCAFB9921068DCF00556C7A /* DisplayLocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLocationTableViewController.swift; sourceTree = "<group>"; };
 		4BCAFB9B21068F3E00556C7A /* DisplayLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLocationTableViewCell.swift; sourceTree = "<group>"; };
 		4BCAFBA72108E8AE00556C7A /* MapText.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MapText.entitlements; sourceTree = "<group>"; };
+		4BF4807A211F3F3D007EE1BB /* AppleHQ.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AppleHQ.gpx; sourceTree = "<group>"; };
+		4BF4807C211F42D0007EE1BB /* CupertinoSquare.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CupertinoSquare.gpx; sourceTree = "<group>"; };
 		CA82F9FCA63A8138098038CF /* Pods-MapText.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapText.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapText/Pods-MapText.release.xcconfig"; sourceTree = "<group>"; };
 		E1E3672D00E152B4FCFF3DE2 /* Pods_MapText.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapText.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46449992AE5E6C942F9F6C6 /* Pods-MapText.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapText.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapText/Pods-MapText.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +126,8 @@
 				4B55C752210F92C000A5E6F4 /* GoogleService-Info.plist */,
 				4B3C8AD9210643FD0053877E /* Assets.xcassets */,
 				4B55C756210FC92E00A5E6F4 /* Constants.swift */,
+				4BF4807A211F3F3D007EE1BB /* AppleHQ.gpx */,
+				4BF4807C211F42D0007EE1BB /* CupertinoSquare.gpx */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";

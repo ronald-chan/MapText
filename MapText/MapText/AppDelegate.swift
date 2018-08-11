@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.distanceFilter=30
+        locationManager.distanceFilter=20
         locationManager.requestAlwaysAuthorization()
         if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways {
             locationManager.allowsBackgroundLocationUpdates=true
@@ -52,6 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
                 AppDelegate.updated=true
             }
             currentLoc=CLLocation(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude)
+            print(currentLoc)
             for loc in locs {
                 if loc.locationActive {
                     let formatted=CLLocation(latitude: loc.latitude, longitude: loc.longitude)
